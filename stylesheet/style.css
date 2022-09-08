@@ -12,8 +12,9 @@ body {
 }
 
 .container {
-    max-width: 940px;
+    min-width: 940px;
     margin: 0px auto;
+    padding: 0px 10px;
 }
 
 .flex-condition-1 {
@@ -24,7 +25,9 @@ body {
 
 .header {
     background-color: #335277;
-    height: auto;
+    height: 51px;
+    display: flex;
+    align-items: center;
 }
 
 .main_title {
@@ -57,7 +60,7 @@ body {
     background-repeat: no-repeat;
     background-position: 177px 32px;
     height: auto;
-    margin-top: 133px;
+    margin: 133px auto 0px auto;
     display: flex;
     justify-content: space-between;
     max-width: 746px;
@@ -111,12 +114,13 @@ body {
     background-image: url('../img_src/background/code.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 940px;
+    max-width: 940px;
     height: 293px;
-    margin-top: 136px;
+    margin: 136px auto 0px auto;
 }
 
-.more_info {
+.holder_about {
+    margin: 0px auto;
     max-width: 460px;
 }
 
@@ -154,56 +158,37 @@ body {
 
 @media (max-width: 940px) {
     .container {
-        max-width: 460px;
+        min-width: 746px;
     }
+}
 
+@media (max-width: 776px) {
+    .container {
+        min-width: calc(100vw - 30px);
+    }
     .intro {
         flex-direction: column;
-        background-image: url('../img_src/background/bg_intro_tablet.svg');
-        background-position: 241px 0px;
-        height: 516px;
-        align-items: flex-start;
+        height: auto;
+        align-items: center;
     }
-
-    .my_photo {
-        margin: 48px 0px 0px 63px;
-    }
-
-
-    .contact {
-        margin-top: 41px;
-    }
-
     .left_introduction {
-        margin-left: 63px;
+        text-align: center;
     }
 }
 
-@media (max-width: 460px) {
-    .container {
-        max-width: 380px;
-    }
-
-    .info {
-        max-width: 456px;
-    }
-
-    .my_photo {
-        margin-left: 25px;
-    }
-
-    .left_introduction {
-        margin-left: 25px;
+@media (max-width: 500px) {
+    .menu {
+        display: none;
     }
 }
 
-.animate {
+.js-animate {
     display: none;
 }
 
-.animate.active {
-    display: block;
-    animation: animate 0.5s forwards;
+.activeAnimate {
+    display: block !important;
+    animation: animate 0.75s forwards !important;
 }
 
 @keyframes animate {
